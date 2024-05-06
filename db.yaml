@@ -2,7 +2,7 @@
   hosts: db
   become: yes
   vars:
-    login_host: db.divaws78s.online
+    login_host: 172.31.25.233
   vars_prompt:
   - name: mysql_root_password  
     prompt: Please enter MYSQL root password
