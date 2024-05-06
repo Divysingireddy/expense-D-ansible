@@ -1,4 +1,4 @@
-- name: Configure backend server
+- name: configure backend server
   become: yes
   hosts: backend
   vars:
@@ -14,7 +14,7 @@
   - name: install 
     ansible.builtin.dnf:   
       name: {{ item }}
-      satet: installed
+      state: installed
     loop:
     - nodejs
     - mysql  
