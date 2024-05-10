@@ -20,6 +20,10 @@
     - nodejs
     - mysql  
 
+  - name: create expense user
+    ansible.builtin.user:
+      name: expense  
+
   - name: create app directory
     ansible.builtin.file:
       path: /app
@@ -71,11 +75,7 @@
       name: backend
       state: started
       enabled: yes
-
-  - name: restart the backend
-    ansible.builtin.service:
-      name: backend
-      state: restarted    
+   
   
 
  
